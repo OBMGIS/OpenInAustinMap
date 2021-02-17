@@ -24,7 +24,7 @@
 	<div id="mapid"></div>
 	<script>
 
-	var mymap = L.map('mapid').setView([30.284,-97.736],13);
+	var mymap = L.map('mapid').setView([30.284,-97.736],12);
 
 	L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 	maxZoom: 18,
@@ -34,29 +34,198 @@
 	id: 'mapbox.streets'
 	}).addTo(mymap);
 
+////ICONS
 
-  L.marker([30.297752814260306, -97.74101575876836]).addTo(mymap)
-	.bindPopup("<b>Wheatsville Food Co-op</b><br />Number: 5124782667<br>Address: 3101 Guadalupe St, Austin, TX 78705 ").openPopup();
+///GROCERIES
 
-  L.marker([30.268666183247625, -97.72724300295151]).addTo(mymap)
-	.bindPopup("<b>Quickie Pickie</b><br />Number: 5124790136<br>1208 E 11th St, Austin, TX 78702 ").openPopup();
-
-  L.marker([30.337360183306018, -97.72039080294964]).addTo(mymap)
-	.bindPopup("<b>Dia's Market</b><br />Number: 5125205115<br>812 Justin Ln, Austin, TX 78757 ").openPopup();
-
-  L.marker([30.24086166461486, -97.7523310029522]).addTo(mymap)
-	.bindPopup("<b>RiverCity Market</b><br />Number: 5124624955<br>2209 S Congress Ave, Austin, TX 78704 ").openPopup();
-
-  L.marker([30.24086166461486, -97.7523310029522]).addTo(mymap)
-	.bindPopup("<b>Thom's Market - Riverside</b><br />Number: 5124624955<br>2209 S Congress Ave, Austin, TX 78704 ").openPopup();
+var groceries = L.icon({
+      iconUrl: 'images/groceries.svg',
+      iconSize: [32, 95],
+      iconAnchor: [22, 94],
+      popupAnchor: [-3, -76],
+      shadowUrl: '',
+      shadowSize: [68, 95],
+      shadowAnchor: [22, 94]
+  });
 
 
+  L.marker([30.297752814260306, -97.74101575876836],{icon: groceries}).addTo(mymap)
+	.bindPopup("<b>Wheatsville Food Co-op</b><br />Number: 5124782667<br>Address: 3101 Guadalupe St, Austin, TX 78705 ");
+
+  L.marker([30.268666183247625, -97.72724300295151],{icon: groceries}).addTo(mymap)
+	.bindPopup("<b>Quickie Pickie</b><br />Number: 5124790136<br>Address: 1208 E 11th St, Austin, TX 78702 ");
+
+  L.marker([30.337360183306018, -97.72039080294964],{icon: groceries}).addTo(mymap)
+	.bindPopup("<b>Dia's Market</b><br />Number: 5125205115<br>Address: 812 Justin Ln, Austin, TX 78757 ");
+
+  L.marker([30.24086166461486, -97.7523310029522],{icon: groceries}).addTo(mymap)
+	.bindPopup("<b>RiverCity Market</b><br />Number: 5124624955<br>Address: 2209 S Congress Ave, Austin, TX 78704 ");
+
+  L.marker([30.24086166461486, -97.7523310029522],{icon: groceries}).addTo(mymap)
+	.bindPopup("<b>Thom's Market - Riverside</b><br />Number: 5124483333<br>Address: 160 E Riverside Dr, Austin, TX 78704 ");
+
+  L.marker([30.26161451523703, -97.75965368516076],{icon: groceries}).addTo(mymap)
+	.bindPopup("<b>Thom's Market - Barton Springs</b><br />Number: 5124799800<br>Address: 1418 Barton Springs Rd, Austin, TX 78704 ");
+
+  L.marker([30.25847494896154, -97.78758190295177],{icon: groceries}).addTo(mymap)
+	.bindPopup("<b>Thom's Market - Spyglass</b><br />Number: 5126140066<br>Address: 1500 Spyglass Dr, Austin, TX 78746 ");
+
+  L.marker([30.225981599044434, -97.77025790327244],{icon: groceries}).addTo(mymap)
+	.bindPopup("<b>711 </b><br />Number: 5124442828<br>Address: 5601 W Ben White Blvd, Austin, TX 78704 ");
+
+  L.marker([30.184050896429834, -97.84762516492694],{icon: groceries}).addTo(mymap)
+	.bindPopup("<b>Randalls </b><br />Number: 5122825720<br>Address: 9911 Brodie Ln, Austin, TX 78748 ");
+
+  L.marker([30.315453304580583, -97.73463391399584],{icon: groceries}).addTo(mymap)
+	.bindPopup("<b>Natural Grocers</b><br />Number: 5123235100<br>Address: 4615 N Lamar Blvd # 304, Austin, TX 78751 ");
 
 
+//// Restaurants
+
+var restaurant = L.icon({
+      iconUrl: 'images/restaurant.svg',
+      iconSize: [32, 95],
+      iconAnchor: [22, 94],
+      popupAnchor: [-3, -76],
+      shadowUrl: '',
+      shadowSize: [68, 95],
+      shadowAnchor: [22, 94]
+  });
+
+L.marker([30.238050913337013, -97.73944051768771],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>Whip in</b><br />Number: 5124425337<br>Address: 1950 S IH 35 Frontage Rd, Austin, TX 78704 ");
+
+  L.marker([30.26092357556372, -97.7374155786202],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>IHOP</b><br />Number: 5124789520<br>Address: 1707 E Cesar Chavez St, Austin, TX 78701 ");
 
 
+  L.marker([30.26956724314582, -97.72983061495341],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>Old Thousand</b><br />Number: 7372226637<br>Address: 1000 E 11th St, Austin, TX 78702 ");
+
+  L.marker([30.26956724314582, -97.72983061495341],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>Texas French Bread</b><br />Number: 5124990544<br>Address: 2900 Rio Grande St, Austin, TX 78705 ");
+
+  L.marker([30.21841549316576, -97.68808293891382],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>Waffle House</b><br />Number: 5123890444<br>Address: 7809 E Ben White Blvd, Austin, TX 78744 ");
+  
+  L.marker([30.262714890594793, -97.74361972109936],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>Alfred at the LINE Austin</b><br />Number: 5124731595<br>Address: 111 E Cesar Chavez St, Austin, TX 78701 ");
+
+  L.marker([30.29249259685099, -97.73564552050905],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>Crown & Anchor Pub</b><br />Number: 5123229168<br>Address: 2911 San Jacinto Blvd, Austin, TX 78705 ");
+
+
+  L.marker([30.28183330912673, -97.74356298202392],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>P. Terry's Burger Stand</b><br />Number: 7372120420<br>Address: 517 W Martin Luther King Jr Blvd, Austin, TX 78701 ");
+
+  L.marker([30.233777120307202, -97.73922920702731],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>Whataburger</b><br />Number: 5124442068<br>Address: 1616 E Oltorf St, Austin, TX 78741 ");
+
+  L.marker([30.3382786350178, -97.71891200761313],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>Black Star Co-op</b><br />Number: 5124522337<br>Address: 7020 Easy Wind Dr, Austin, TX 78752 ");
+
+  L.marker([30.204998195239416, -97.97912557927513],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>Pieous</b><br />Number: 5125551212<br>Address: 166 Hargraves Dr h, Austin, TX 78737 ");
+
+  L.marker([30.266967683301605, -97.74034893581147],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>The Backspace</b><br />Number: 5124749899<br>Address: 507 San Jacinto Blvd, Austin, TX 78701 ");
+
+  L.marker([30.400218124216046, -97.74727955056451],{icon: restaurant}).addTo(mymap)
+	.bindPopup("<b>Taco Bell</b><br />Number: 5123386033<br>Address: 4811 W Braker Ln West, Austin, TX 78759 ");
+
+//COFFEE
+
+var COFFEE = L.icon({
+      iconUrl: 'images/coffee.svg',
+      iconSize: [32, 95],
+      iconAnchor: [22, 94],
+      popupAnchor: [-3, -76],
+      shadowUrl: '',
+      shadowSize: [68, 95],
+      shadowAnchor: [22, 94]
+  });
+
+  L.marker([30.268801490444474, -97.72875714995708],{icon: COFFEE}).addTo(mymap)
+	.bindPopup("<b>Try Hard Coffee Roasters</b><br />Number: No Number Listed<br>Address: 1115 E 11th St, Austin, TX 78702 ");
+
+  L.marker([30.259892225910605, -97.73918650517983],{icon: COFFEE}).addTo(mymap)
+	.bindPopup("<b>Cafe 605</b><br />Number: 5124764755<br>Address: 605 Davis St, Austin, TX 78701 ");
+
+  L.marker([30.242776534507087, -97.75265806713024],{icon: COFFEE}).addTo(mymap)
+	.bindPopup("<b>The Meteor</b><br />Number: 5123519541<br>Address: 2110 S Congress Ave, Austin, TX 78704 ");
+
+  L.marker([30.242776534507087, -97.75265806713024],{icon: COFFEE}).addTo(mymap)
+	.bindPopup("<b>The Meteor</b><br />Number: 5123519541<br>Address: 2110 S Congress Ave, Austin, TX 78704 ");
+
+  L.marker([30.28855244119955, -97.74209025069173],{icon: COFFEE}).addTo(mymap)
+	.bindPopup("<b>Lucky Lab Coffee Co.</b><br />Number: 5124206950<br>Address: 2421 San Antonio St, Austin, TX 78705 ");
+
+///Hotels
+var hotel = L.icon({
+      iconUrl: 'images/hotel.svg',
+      iconSize: [32, 95],
+      iconAnchor: [22, 94],
+      popupAnchor: [-3, -76],
+      shadowUrl: '',
+      shadowSize: [68, 95],
+      shadowAnchor: [22, 94]
+  });
+
+
+  L.marker([30.26548153562792, -97.74676409535975],{icon: hotel}).addTo(mymap)
+	.bindPopup("<b>W Austin</b><br />Number: 5125423600<br>Address: 200 Lavaca St, Austin, TX 78701 ");
+
+  L.marker([30.262043265100417, -97.73831787574647],{icon: hotel}).addTo(mymap)
+	.bindPopup("<b>Fairmont Austin</b><br />Number: 5126002000<br>Address: 101 Red River St, Austin, TX 78701 ");
 
   
+  var gas = L.icon({
+      iconUrl: 'images/gas.svg',
+      iconSize: [32, 95],
+      iconAnchor: [22, 94],
+      popupAnchor: [-3, -76],
+      shadowUrl: '',
+      shadowSize: [68, 95],
+      shadowAnchor: [22, 94]
+  });
+
+
+  L.marker([30.179513952297956, -97.84023219760385],{icon: gas}).addTo(mymap)
+	.bindPopup("<b>Shell</b><br />Number: 5122824114<br>Address: 3008 W Slaughter Ln, Austin, TX 78748 ");
+
+  L.marker([30.196901897399805, -97.77768730212621],{icon: gas}).addTo(mymap)
+	.bindPopup("<b>Valero</b><br />Number: No number listed<br>Address: 6400 S Congress Ave, Austin, TX 78745 ");
+
+  L.marker([30.278289392331573, -97.77242011006976],{icon: gas}).addTo(mymap)
+	.bindPopup("<b>Chevron</b><br />Number: 5124777477<br>Address: 2402 Lake Austin Blvd, Austin, TX 78703 ");
+
+  var retail = L.icon({
+      iconUrl: 'images/retail.svg',
+      iconSize: [32, 95],
+      iconAnchor: [22, 94],
+      popupAnchor: [-3, -76],
+      shadowUrl: '',
+      shadowSize: [68, 95],
+      shadowAnchor: [22, 94]
+  });
+  
+
+  L.marker([30.23344642937744, -97.7915967647028],{icon: retail}).addTo(mymap)
+	.bindPopup("<b>Target</b><br />Number: 5124452266<br>Address: 2300 W Ben White Blvd, Austin, TX 78704 ");
+
+  L.marker([30.475506606971766, -97.79645822726548],{icon: retail}).addTo(mymap)
+	.bindPopup("<b>Target</b><br />Number: 5126513376<br>Address: 10900 Lakeline Mall Dr, Austin, TX 78717");
+
+  L.marker([30.162968553175876, -97.79408225855731],{icon: retail}).addTo(mymap)
+	.bindPopup("<b>Target</b><br />Number: 5126870634<br>Address: 9500 S IH 35 Frontage Rd Suite G, Austin, TX 78748 ");
+
+  L.marker([30.263978175091196, -97.73388479604763],{icon: retail}).addTo(mymap)
+	.bindPopup("<b>Target</b><br />Number: 5128132929<br>Address: 901 E 5th St Ste 140 Suite 140, Austin, TX 78702 ");
+
+  L.marker([30.235747831423843, -97.81990554011136],{icon: retail}).addTo(mymap)
+	.bindPopup("<b>Sams Club</b><br />Number: 5123588695<br>Address: 4970 US-290, Austin, TX 78735 ");
+
+
 	mymap.on('click', onMapClick);
 
 
